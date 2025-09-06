@@ -1,5 +1,3 @@
-import React from "react";
-
 export function PlaceholderImage({
   label = "Image",
   className = "",

@@ -1,4 +1,3 @@
-import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { TopBar } from "./components/top-bar";
 import { Footer } from "./components/footer";
