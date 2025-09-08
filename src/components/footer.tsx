@@ -6,7 +6,7 @@ export const Footer: React.FC = () => (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-10 md:grid-cols-4 items-start">
         
-        {/* Company */
+        {/* Company */}
         <div>
           <div className="font-extrabold text-lg">HYPROPS-LPS</div>
           <div className="text-[11px] opacity-80">LOCAL CONTENT | GLOBAL STANDARDS</div>
@@ -69,8 +69,4 @@ export const Footer: React.FC = () => (
       </div>
 
       <div className="mt-10 border-t border-white/10 pt-6 text-xs opacity-80">
-        © {new Date().getFullYear()} Hyprops-LPS · Privacy Policy
-      </div>
-    </div>
-  </footer>
-);
+        ©
