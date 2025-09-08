@@ -5,6 +5,9 @@ import { HomePage } from "./pages/homepage";
 import { ManagementTeamPage } from "./pages/management-team-page";
 import ServicesPage from "./pages/services";
 import ProjectsPage from "./pages/projects";
+import PartnersPage from "./pages/partners";
+import CareersPage from "./pages/careers";
+import ContactPage from "./pages/contact";
 // import { ServicesPage } from "./pages/services";
 // import { ProjectsPage } from "./pages/projects";
 // import { PartnersPage } from "./pages/partners";
@@ -22,9 +25,9 @@ export default function App() {
             <Route path="/management-team" element={<ManagementTeamPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/partner" />
-            <Route path="/careers" />
-            <Route path="/contact" />
+            <Route path="/partner" element={<PartnersPage/>} />
+            <Route path="/careers" element={<CareersPage/>}/>
+            <Route path="/contact" element={<ContactPage/>} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </div>
