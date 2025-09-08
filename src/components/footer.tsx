@@ -52,32 +52,28 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">CONTACT</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li>+244 944 228 887</li>
-            <li>info@lps-hyprops.com</li>
+            <li>
+              <a href="tel:+244944228887" className="hover:opacity-100 opacity-80">
+                +244 944 228 887
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@lps-hyprops.com" className="hover:opacity-100 opacity-80">
+                info@lps-hyprops.com
+              </a>
+            </li>
             <li>Talatona Condominio Mirantes, Case Número C18, Luanda – Angola</li>
             <li>Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola</li>
           </ul>
         </div>
       </div>
 
-      {/* Socials */}
+      {/* Social Media */}
       <div className="mt-8 flex gap-3">
-        {[
-          { name: "Facebook", icon: "F", link: "#" },
-          { name: "Twitter", icon: "X", link: "#" },
-          { name: "LinkedIn", icon: "in", link: "#" },
-          { name: "Email", icon: "@", link: "mailto:info@lps-hyprops.com" },
-        ].map((s) => (
-          <a
-            key={s.name}
-            href={s.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-white/20"
-          >
-            {s.icon}
-          </a>
-        ))}
+        <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">F</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">X</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">in</a>
+        <a href="mailto:info@lps-hyprops.com" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">@</a>
       </div>
 
       <div className="mt-10 border-t border-white/10 pt-6 text-xs opacity-80">
