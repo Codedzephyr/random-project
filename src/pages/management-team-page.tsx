@@ -1,20 +1,13 @@
 import React from "react";
 import { TeamCard } from "../components/team-card";
-// import { TeamCard } from "../components/team/TeamCard";
+import PageHero from "../components/page-hero"; // Make sure the default export is capitalized
 
 export const ManagementTeamPage: React.FC = () => (
   <main>
-    <section className="relative h-[36vh] w-full overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1400&auto=format&fit=crop')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-black/45" />
-      </div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <h1 className="text-white text-3xl sm:text-5xl font-extrabold tracking-wide">
-          MANAGEMENT TEAM
-        </h1>
-      </div>
-    </section>
+    <PageHero
+      title="Management Team"
+      image="/images/management-team-hero.jpg"
+    />
 
     <section className="py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
