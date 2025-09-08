@@ -1,8 +1,6 @@
 import React from "react";
 import { Card } from "./card";
 import { PlaceholderImage } from "./placeholder-image";
-// import { Card } from "../../components/ui/Card";
-// import { PlaceholderImage } from "../../components/ui/PlaceholderImage";
 
 export const Intro: React.FC = () => (
   <section className="bg-white">
@@ -12,18 +10,28 @@ export const Intro: React.FC = () => (
         <Card>
           <div className="p-8">
             <h4 className="text-sm font-bold text-sky-700">
-              Welcome to Hyprops
+              Welcome to Hyprops-LPS
             </h4>
             <h3 className="mt-2 text-2xl md:text-3xl font-extrabold tracking-tight">
-              INNOVATIVE SOLUTIONS
+              LOCAL CONTENT
               <br />
-              QUALITY SERVICES
+              GLOBAL STANDARDS
             </h3>
             <p className="mt-3 text-neutral-600 leading-relaxed">
-              Over the last 25 years, we have built our organisation around a
-              set of values that ensures everyone on the team works in synergy
-              to deliver our objectives. Our success is seen in how our client
-              list and size/complexity of work has grown rapidly over the years.
+              LPS Hyprops – Oil & Gas Service, LDA is an Angolan-owned joint
+              venture between LPS Lda and Hyprops Nigeria Limited, representing
+              HyGroup.
+              <br />
+              <br />
+              By leveraging LPS Lda’s industrial services and Hyprops Nigeria’s
+              oilfield expertise, we deliver engineering, procurement,
+              fabrication, construction, installation, subsea life-of-field,
+              operations & maintenance, manpower outsourcing, and supply chain
+              management.
+              <br />
+              <br />
+              We are committed to world-class safety, environmental stewardship,
+              and promoting local content across all our operations.
             </p>
             <button className="mt-5 inline-flex items-center rounded-xl bg-neutral-900 px-5 py-3 text-sm font-semibold text-white">
               READ MORE
@@ -31,10 +39,12 @@ export const Intro: React.FC = () => (
           </div>
         </Card>
       </div>
+
+      {/* Stats - optional, can be removed if no data available */}
       <div className="mt-10 grid grid-cols-2 gap-4 md:max-w-md">
         {[
-          { k: "Years of Experience", v: "25+" },
-          { k: "Projects Completed", v: "1,250+" },
+          { k: "Years of Experience", v: "—" },
+          { k: "Projects Completed", v: "—" },
         ].map((s) => (
           <div
             key={s.k}
