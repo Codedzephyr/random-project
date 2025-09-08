@@ -1,11 +1,11 @@
 import React from "react";
 
-interface pageheroProps {
+interface PageHeroProps {
   title: string;
   image: string;
 }
 
-const pagehero: React.FC<pageheroProps> = ({ title, image }) => {
+const pagehero: React.FC<PageHeroProps> = ({ title, image }) => {
   return (
     <section
       className="relative h-64 md:h-80 lg:h-96 flex items-center justify-center text-center text-white"
@@ -25,4 +25,4 @@ const pagehero: React.FC<pageheroProps> = ({ title, image }) => {
   );
 };
 
-export default pagehero;
+export default PageHero;
