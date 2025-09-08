@@ -1,6 +1,7 @@
 import React from "react";
 import { TeamCard } from "../components/team-card";
-import PageHero from "../components/page-hero";
+import PageHero from "../components/PageHero";
+// import PageHero from "../components/page-hero";
 
 export const ManagementTeamPage: React.FC = () => (
   <main>

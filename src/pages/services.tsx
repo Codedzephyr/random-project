@@ -1,9 +1,30 @@
 import React from "react";
-import SectionTitle from "../components/section-title";
-import PageHero from "../components/page-hero";
+import { SectionTitle } from "../components/section-title";
+import PageHero from "../components/PageHero";
+// import SectionTitle from "../components/section-title";
+// import PageHero from "../components/page-hero";
 
-const services = [
-  // ... your services array unchanged
+type Service = {
+  id: string;
+  title: string;
+  desc: string;
+  img: string;
+};
+
+const services: Service[] = [
+  {
+    id: "engineering",
+    title: "Engineering Solutions",
+    desc: "We provide high-quality engineering support for oil & gas operations...",
+    img: "/images/engineering.jpg",
+  },
+  {
+    id: "maintenance",
+    title: "Maintenance Services",
+    desc: "Comprehensive maintenance and inspection solutions...",
+    img: "/images/maintenance.jpg",
+  },
+  // ...other services
 ];
 
 const ServicesPage: React.FC = () => (
@@ -28,8 +49,12 @@ const ServicesPage: React.FC = () => (
               }`}
             >
               <div>
-                <h3 className="text-xl font-bold text-neutral-800">{s.title}</h3>
-                <p className="mt-4 text-neutral-600 leading-relaxed">{s.desc}</p>
+                <h3 className="text-xl font-bold text-neutral-800">
+                  {s.title}
+                </h3>
+                <p className="mt-4 text-neutral-600 leading-relaxed">
+                  {s.desc}
+                </p>
                 <button className="mt-5 inline-flex items-center rounded-lg bg-[#163A5B] px-5 py-2 text-sm font-semibold text-white hover:opacity-90">
                   Read More
                 </button>

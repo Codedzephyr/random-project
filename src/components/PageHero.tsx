@@ -5,7 +5,7 @@ interface PageHeroProps {
   image: string;
 }
 
-const pagehero: React.FC<PageHeroProps> = ({ title, image }) => {
+const PageHero: React.FC<PageHeroProps> = ({ title, image }) => {
   return (
     <section
       className="relative h-64 md:h-80 lg:h-96 flex items-center justify-center text-center text-white"
