@@ -10,7 +10,7 @@ export const VideoAbout: React.FC = () => (
             Local Content, Global Standards
           </h3>
           <p className="mt-3 text-neutral-600 leading-relaxed">
-            Hyprops is constantly focused on seeking out opportunities for
+            Hyprops-LPS is constantly focused on seeking out opportunities for
             growth and advancement. Find out about our journey so far.
           </p>
         </div>
