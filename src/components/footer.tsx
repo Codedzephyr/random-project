@@ -9,7 +9,7 @@ export const Footer: React.FC = () => (
             <div className="h-10 w-10 rounded-xl bg-white/90" />
             <div className="leading-tight">
               <div className="font-extrabold tracking-wide">
-                HYPROPS NIGERIA LIMITED
+                HYPROPS-LPS
               </div>
               <div className="text-[11px] opacity-80">
                 LOCAL CONTENT | GLOBAL STANDARDS
