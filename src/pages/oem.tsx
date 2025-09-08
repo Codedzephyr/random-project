@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "../components/card";
 import { SectionTitle } from "../components/section-title";
-import { PlaceholderImage } from "../components/placeholder-image";
 
 const OEMsPage: React.FC = () => (
   <main className="bg-white py-16 lg:py-24">
