@@ -43,8 +43,8 @@ export const Footer: React.FC = () => (
           <div className="text-sm font-bold tracking-wide">CONTACT</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
             <li>+234 (201) 271 7297, +234 (201) 271 7298</li>
-            <li>info@hyprops.com</li>
-            <li>HyGroup Place – 6, Ojulari Street, Lekki Phase 1, Lagos</li>
+            <li>info@lps-hyprops.com</li>
+            <li>Talatona Condomino Mirantes, Case Numbero C18, Luanda, Angola</li>
           </ul>
         </div>
         <div>
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => (
         </div>
       </div>
       <div className="mt-10 border-t border-white/10 pt-6 text-xs opacity-80">
-        © {new Date().getFullYear()} Hyprops Nigeria Limited · Privacy Policy
+        © {new Date().getFullYear()} Hyprops-LPS · Privacy Policy
       </div>
     </div>
   </footer>
