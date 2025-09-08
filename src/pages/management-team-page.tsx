@@ -1,6 +1,6 @@
 import React from "react";
 import { TeamCard } from "../components/team-card";
-import PageHero from "../components/page-hero"; // Make sure the default export is capitalized
+import PageHero from "../components/page-hero";
 
 export const ManagementTeamPage: React.FC = () => (
   <main>
@@ -11,8 +11,8 @@ export const ManagementTeamPage: React.FC = () => (
 
     <section className="py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold">Meet Our Team</h2>
-        <p className="mt-2 text-neutral-600 max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-center">Meet Our Team</h2>
+        <p className="mt-2 text-neutral-600 max-w-3xl mx-auto text-center">
           Our executive team is made up of a group of industry leaders in each
           of their respective fields.
         </p>
