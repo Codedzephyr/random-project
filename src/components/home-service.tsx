@@ -1,8 +1,6 @@
 import React from "react";
 import { Card } from "./card";
 import { SectionTitle } from "./section-title";
-// import { Card } from "../../components/ui/Card";
-// import { SectionTitle } from "../../components/ui/SectionTitle";
 
 export const Services: React.FC = () => (
   <section className="py-16 lg:py-24 bg-neutral-50">
@@ -10,33 +8,33 @@ export const Services: React.FC = () => (
       <SectionTitle
         eyebrow="OUR SERVICES"
         title="What we offer"
-        subtitle="At Hyprops Nigeria Limited, we offer the following services:"
+        subtitle="At Hyprops-LPS, we deliver a full spectrum of oil & gas services:"
       />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {[
           {
-            title: "MANPOWER OUTSOURCING",
-            desc: "Placement and support across the oil and gas value chain.",
+            title: "ENGINEERING, PROCUREMENT & FABRICATION",
+            desc: "Turnkey solutions in engineering, procurement, and fabrication across oil & gas projects.",
+          },
+          {
+            title: "CONSTRUCTION & INSTALLATION",
+            desc: "Specialized construction and installation of facilities, infrastructure, and offshore assets.",
+          },
+          {
+            title: "SUBSEA LIFE OF FIELD SERVICES",
+            desc: "Maintenance, refurbishment, testing, and enhancement of subsea and topside equipment.",
           },
           {
             title: "FACILITIES OPERATIONS & MAINTENANCE",
-            desc: "Every aspect of operations and maintenance.",
+            desc: "Reliable operations and maintenance services for critical assets, ensuring efficiency and safety.",
           },
           {
-            title: "PROCUREMENT & SUPPLY CHAIN MANAGEMENT",
-            desc: "Vendor evaluation, sourcing, expediting.",
+            title: "MANPOWER OUTSOURCING",
+            desc: "Recruitment, contracts, compliance, and workforce support for both local and expatriate personnel.",
           },
           {
-            title: "EPCI & EPCM ON TURNKEY BASIS",
-            desc: "Seamless, quality turnkey project services.",
-          },
-          {
-            title: "MARINE MAINTENANCE",
-            desc: "Wide‑ranging vessel management (subsidiary).",
-          },
-          {
-            title: "SUBSEA LIFE OF FIELD",
-            desc: "Integrated, comprehensive life of field solutions.",
+            title: "SUPPLY CHAIN MANAGEMENT",
+            desc: "Comprehensive procurement, logistics, and inventory management through global and local networks.",
           },
         ].map((s) => (
           <Card key={s.title}>
