@@ -4,6 +4,8 @@ export const Footer: React.FC = () => (
   <footer className="bg-[#163A5B] text-white">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid gap-10 md:grid-cols-4 items-start">
+        
+        {/* Company */}
         <div className="md:col-span-1">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 rounded-xl bg-white/90" />
@@ -20,18 +22,18 @@ export const Footer: React.FC = () => (
             ISO Badge
           </div>
         </div>
+
+        {/* Services */}
         <div>
           <div className="text-sm font-bold tracking-wide">OUR SERVICES</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
             {[
-              "Machine Shop",
-              "Subsea Life of Field",
-              "Procurement & SCM",
-              "Marine Maintenance",
-              "EPCI & EPCM",
-              "Facilities O&M",
-              "Training & Capacity",
+              "Engineering, Procurement & Fabrication",
+              "Construction & Installation",
+              "Subsea Life of Field Services",
+              "Facilities Operations & Maintenance",
               "Manpower Outsourcing",
+              "Supply Chain Management"
             ].map((i) => (
               <li key={i} className="hover:opacity-100 opacity-80">
                 {i}
@@ -39,18 +41,21 @@ export const Footer: React.FC = () => (
             ))}
           </ul>
         </div>
+
+        {/* Contact */}
         <div>
           <div className="text-sm font-bold tracking-wide">CONTACT</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li>+234 (201) 271 7297, +234 (201) 271 7298</li>
+            <li>+244 944 228 887</li>
             <li>info@lps-hyprops.com</li>
-            <li>Talatona Condomino Mirantes, Case Numbero C18, Luanda, Angola</li>
+            <li>Talatona Condominio Mirantes, Case Número C18, Luanda – Angola</li>
+            <li>Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola</li>
           </ul>
         </div>
+
+        {/* Social Media */}
         <div>
-          <div className="text-sm font-bold tracking-wide">
-            SOCIAL MEDIA LINKS
-          </div>
+          <div className="text-sm font-bold tracking-wide">SOCIAL MEDIA LINKS</div>
           <div className="mt-3 flex items-center gap-3 text-sm opacity-90">
             {["F", "X", "in", "@"].map((i) => (
               <div
@@ -63,6 +68,7 @@ export const Footer: React.FC = () => (
           </div>
         </div>
       </div>
+
       <div className="mt-10 border-t border-white/10 pt-6 text-xs opacity-80">
         © {new Date().getFullYear()} Hyprops-LPS · Privacy Policy
       </div>
