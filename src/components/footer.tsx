@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Footer: React.FC = () => (
   <footer className="bg-[#163A5B] text-white">
@@ -27,18 +28,23 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">OUR SERVICES</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            {[
-              "Engineering, Procurement & Fabrication",
-              "Construction & Installation",
-              "Subsea Life of Field Services",
-              "Facilities Operations & Maintenance",
-              "Manpower Outsourcing",
-              "Supply Chain Management"
-            ].map((i) => (
-              <li key={i} className="hover:opacity-100 opacity-80">
-                {i}
-              </li>
-            ))}
+            <li><Link to="/services#engineering" className="hover:opacity-100 opacity-80">Engineering, Procurement & Fabrication</Link></li>
+            <li><Link to="/services#construction" className="hover:opacity-100 opacity-80">Construction & Installation</Link></li>
+            <li><Link to="/services#subsea" className="hover:opacity-100 opacity-80">Subsea Life of Field Services</Link></li>
+            <li><Link to="/services#facilities" className="hover:opacity-100 opacity-80">Facilities Operations & Maintenance</Link></li>
+            <li><Link to="/services#manpower" className="hover:opacity-100 opacity-80">Manpower Outsourcing</Link></li>
+            <li><Link to="/services#scm" className="hover:opacity-100 opacity-80">Supply Chain Management</Link></li>
+          </ul>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <div className="text-sm font-bold tracking-wide">QUICK LINKS</div>
+          <ul className="mt-3 space-y-2 text-sm opacity-90">
+            <li><Link to="/projects" className="hover:opacity-100 opacity-80">Projects</Link></li>
+            <li><Link to="/oems" className="hover:opacity-100 opacity-80">OEMs</Link></li>
+            <li><Link to="/management" className="hover:opacity-100 opacity-80">Management Team</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 opacity-80">Contact</Link></li>
           </ul>
         </div>
 
@@ -52,21 +58,26 @@ export const Footer: React.FC = () => (
             <li>Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola</li>
           </ul>
         </div>
+      </div>
 
-        {/* Social Media */}
-        <div>
-          <div className="text-sm font-bold tracking-wide">SOCIAL MEDIA LINKS</div>
-          <div className="mt-3 flex items-center gap-3 text-sm opacity-90">
-            {["F", "X", "in", "@"].map((i) => (
-              <div
-                key={i}
-                className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center"
-              >
-                {i}
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Socials */}
+      <div className="mt-8 flex gap-3">
+        {[
+          { name: "Facebook", icon: "F", link: "#" },
+          { name: "Twitter", icon: "X", link: "#" },
+          { name: "LinkedIn", icon: "in", link: "#" },
+          { name: "Email", icon: "@", link: "mailto:info@lps-hyprops.com" },
+        ].map((s) => (
+          <a
+            key={s.name}
+            href={s.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center text-sm hover:bg-white/20"
+          >
+            {s.icon}
+          </a>
+        ))}
       </div>
 
       <div className="mt-10 border-t border-white/10 pt-6 text-xs opacity-80">
