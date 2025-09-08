@@ -1,92 +1,57 @@
 import React from "react";
 import { SectionTitle } from "../components/section-title";
-import { Card } from "../components/card";
 
 const ServicesPage: React.FC = () => (
   <main className="bg-white py-16 lg:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <SectionTitle
         eyebrow="OUR SERVICES"
-        title="Comprehensive Oil & Gas Services"
-        subtitle="Hyprops-LPS provides integrated services covering the entire project lifecycle."
+        title="What We Do"
+        subtitle="Hyprops-LPS provides integrated services across the oil & gas value chain."
       />
 
-      <div className="mt-10 space-y-8">
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Engineering, Procurement & Fabrication
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              We specialize in the design and fabrication of offshore cargo baskets, cutting boxes,
-              HVAC systems, ducts, and waste skips. Our team ensures safety, quality, and cost
-              efficiency across all engineering and fabrication projects.
-            </p>
-          </div>
-        </Card>
+      <div className="mt-10 space-y-10">
+        <div id="engineering">
+          <h3 className="text-lg font-bold">Engineering, Procurement & Fabrication</h3>
+          <p className="mt-2 text-neutral-600">
+            Detailed engineering, procurement, and fabrication services tailored to client requirements.
+          </p>
+        </div>
 
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Construction & Installation
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              Turnkey EPC and EPCM services including installation of subsea structures, pipelines,
-              and offshore facilities. We deliver projects with strict adherence to global standards
-              and local content requirements.
-            </p>
-          </div>
-        </Card>
+        <div id="construction">
+          <h3 className="text-lg font-bold">Construction & Installation</h3>
+          <p className="mt-2 text-neutral-600">
+            Comprehensive onshore and offshore construction and installation solutions.
+          </p>
+        </div>
 
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Subsea Life of Field Services
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              Maintenance, testing, refurbishment, and enhancement of subsea equipment such as HPUs,
-              SDUs, IWOCS, accumulators, umbilical reelers, and chemical injection units.
-            </p>
-          </div>
-        </Card>
+        <div id="subsea">
+          <h3 className="text-lg font-bold">Subsea Life of Field Services</h3>
+          <p className="mt-2 text-neutral-600">
+            End-to-end subsea intervention, inspection, and maintenance services.
+          </p>
+        </div>
 
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Facilities Operations & Maintenance
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              We ensure asset reliability with flowline and pipeline maintenance, turbine servicing,
-              NDT inspections, scaffolding, rope access, corrosion control, and communication
-              infrastructure services.
-            </p>
-          </div>
-        </Card>
+        <div id="facilities">
+          <h3 className="text-lg font-bold">Facilities Operations & Maintenance</h3>
+          <p className="mt-2 text-neutral-600">
+            Operational support and maintenance for energy facilities.
+          </p>
+        </div>
 
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Manpower Outsourcing
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              Recruitment, employment contracts, background checks, immigration support, and
-              placement of both local and expatriate personnel to meet client project needs.
-            </p>
-          </div>
-        </Card>
+        <div id="manpower">
+          <h3 className="text-lg font-bold">Manpower Outsourcing</h3>
+          <p className="mt-2 text-neutral-600">
+            Provision of skilled personnel across multiple disciplines.
+          </p>
+        </div>
 
-        <Card>
-          <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-800">
-              Supply Chain Management
-            </h3>
-            <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
-              End-to-end procurement, vendor evaluation, expediting, and logistics management.
-              Strategic alliances with OEMs such as Tesla Nanocoatings, SpongeJet, and HCS Controls
-              strengthen our supply chain capacity.
-            </p>
-          </div>
-        </Card>
+        <div id="scm">
+          <h3 className="text-lg font-bold">Supply Chain Management</h3>
+          <p className="mt-2 text-neutral-600">
+            Procurement, logistics, vendor management, and local sourcing expertise.
+          </p>
+        </div>
       </div>
     </div>
   </main>
