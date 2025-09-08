@@ -19,9 +19,12 @@ const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
 
 export const TopBar: React.FC = () => {
   const [open, setOpen] = useState(false);
+
+  // ✅ Nav links must match exactly with App.tsx routes
   const nav = [
     { to: "/", label: "Home" },
     { to: "/management-team", label: "Management Team" },
+    { to: "/services", label: "Services" },
     { to: "/projects", label: "Projects" },
     { to: "/partners", label: "Partners" },
     { to: "/careers", label: "Careers" },
@@ -32,22 +35,27 @@ export const TopBar: React.FC = () => {
     <header className="sticky top-0 z-30 w-full border-b border-neutral-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <Link to="/" className="group inline-flex items-center gap-2">
             <div className="h-8 w-8 rounded-xl bg-neutral-900" />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight group-hover:opacity-90">
-                HYPROPS
+                HYPROPS-LPS
               </span>
               <span className="-mt-1 text-[10px] tracking-wide text-neutral-500">
                 Local Content | Global Standards
               </span>
             </div>
           </Link>
+
+          {/* Desktop Menu */}
           <nav className="hidden md:flex items-center">
             {nav.map((n) => (
               <NavA key={n.to} to={n.to} label={n.label} />
             ))}
           </nav>
+
+          {/* Actions */}
           <div className="flex items-center gap-3">
             <Link
               to="/contact"
@@ -76,6 +84,8 @@ export const TopBar: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col">
