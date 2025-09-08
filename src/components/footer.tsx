@@ -15,7 +15,7 @@ export const Footer: React.FC = () => (
           </div>
         </div>
 
-        {/* Services */}
+        {/* Services Links */}
         <div>
           <div className="text-sm font-bold tracking-wide">OUR SERVICES</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
@@ -44,15 +44,23 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">CONTACT</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li><a href="tel:+244944228887">+244 944 228 887</a></li>
-            <li><a href="mailto:info@lps-hyprops.com">info@lps-hyprops.com</a></li>
+            <li>
+              <a href="tel:+244944228887" className="hover:opacity-100 opacity-80">
+                +244 944 228 887
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@lps-hyprops.com" className="hover:opacity-100 opacity-80">
+                info@lps-hyprops.com
+              </a>
+            </li>
             <li>Talatona Condominio Mirantes, Case Número C18, Luanda – Angola</li>
             <li>Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola</li>
           </ul>
         </div>
       </div>
 
-      {/* Socials */}
+      {/* Social Media */}
       <div className="mt-8 flex gap-3">
         <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">F</a>
         <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">X</a>
