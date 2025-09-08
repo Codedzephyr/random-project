@@ -12,6 +12,7 @@ const ContactPage: React.FC = () => (
       />
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {/* Luanda Office */}
         <Card>
           <div className="p-6">
             <h3 className="text-lg font-bold text-neutral-800">Luanda Office</h3>
@@ -19,11 +20,20 @@ const ContactPage: React.FC = () => (
               Lourenço Larry Capita <br />
               Talatona Condominio Mirantes <br />
               Case Número C18, Luanda – Angola <br />
-              Phone: +244 944 228 887 <br />
-              Email: info@lps-hyprops.com
+              Phone:{" "}
+              <a href="tel:+244944228887" className="text-sky-600">
+                +244 944 228 887
+              </a>{" "}
+              <br />
+              Email:{" "}
+              <a href="mailto:info@lps-hyprops.com" className="text-sky-600">
+                info@lps-hyprops.com
+              </a>
             </p>
           </div>
         </Card>
+
+        {/* Cabinda Office */}
         <Card>
           <div className="p-6">
             <h3 className="text-lg font-bold text-neutral-800">Cabinda Office</h3>
@@ -31,8 +41,15 @@ const ContactPage: React.FC = () => (
               João Tati <br />
               Rua de Timor, Casa S/N <br />
               Bairro Marien Ngouabi, Cabinda – Angola <br />
-              Phone: +244 944 228 887 <br />
-              Email: info@lps-hyprops.com
+              Phone:{" "}
+              <a href="tel:+244944228887" className="text-sky-600">
+                +244 944 228 887
+              </a>{" "}
+              <br />
+              Email:{" "}
+              <a href="mailto:info@lps-hyprops.com" className="text-sky-600">
+                info@lps-hyprops.com
+              </a>
             </p>
           </div>
         </Card>
