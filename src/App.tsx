@@ -3,11 +3,11 @@ import { TopBar } from "./components/top-bar";
 import { Footer } from "./components/footer";
 import { HomePage } from "./pages/homepage";
 import { ManagementTeamPage } from "./pages/management-team-page";
-import { ServicesPage } from "./pages/ServicesPage";
-import { ProjectsPage } from "./pages/ProjectsPage";
-import { PartnersPage } from "./pages/PartnersPage";
-import { CareersPage } from "./pages/CareersPage";
-import { ContactPage } from "./pages/ContactPage";
+import { ServicesPage } from "./pages/services";
+import { ProjectsPage } from "./pages/projects";
+import { PartnersPage } from "./pages/partners";
+import { CareersPage } from "./pages/careers";
+import { ContactPage } from "./pages/contact";
 
 export default function App() {
   return (
@@ -23,7 +23,6 @@ export default function App() {
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            {/* Fallback route */}
             <Route path="*" element={<HomePage />} />
           </Routes>
         </div>
