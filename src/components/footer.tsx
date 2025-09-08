@@ -7,18 +7,9 @@ export const Footer: React.FC = () => (
       <div className="grid gap-10 md:grid-cols-4 items-start">
         
         {/* Company */}
-        <div className="md:col-span-1">
-          <div className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-xl bg-white/90" />
-            <div className="leading-tight">
-              <div className="font-extrabold tracking-wide">
-                HYPROPS-LPS
-              </div>
-              <div className="text-[11px] opacity-80">
-                LOCAL CONTENT | GLOBAL STANDARDS
-              </div>
-            </div>
-          </div>
+        <div>
+          <div className="font-extrabold text-lg">HYPROPS-LPS</div>
+          <div className="text-[11px] opacity-80">LOCAL CONTENT | GLOBAL STANDARDS</div>
           <div className="mt-4 h-20 w-40 rounded-lg bg-white/10 flex items-center justify-center text-xs">
             ISO Badge
           </div>
@@ -28,12 +19,12 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">OUR SERVICES</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li><Link to="/services#engineering" className="hover:opacity-100 opacity-80">Engineering, Procurement & Fabrication</Link></li>
-            <li><Link to="/services#construction" className="hover:opacity-100 opacity-80">Construction & Installation</Link></li>
-            <li><Link to="/services#subsea" className="hover:opacity-100 opacity-80">Subsea Life of Field Services</Link></li>
-            <li><Link to="/services#facilities" className="hover:opacity-100 opacity-80">Facilities Operations & Maintenance</Link></li>
-            <li><Link to="/services#manpower" className="hover:opacity-100 opacity-80">Manpower Outsourcing</Link></li>
-            <li><Link to="/services#scm" className="hover:opacity-100 opacity-80">Supply Chain Management</Link></li>
+            <li><Link to="/services#engineering">Engineering, Procurement & Fabrication</Link></li>
+            <li><Link to="/services#construction">Construction & Installation</Link></li>
+            <li><Link to="/services#subsea">Subsea Life of Field Services</Link></li>
+            <li><Link to="/services#facilities">Facilities O&M</Link></li>
+            <li><Link to="/services#manpower">Manpower Outsourcing</Link></li>
+            <li><Link to="/services#scm">Supply Chain Management</Link></li>
           </ul>
         </div>
 
@@ -41,10 +32,11 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">QUICK LINKS</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li><Link to="/projects" className="hover:opacity-100 opacity-80">Projects</Link></li>
-            <li><Link to="/oems" className="hover:opacity-100 opacity-80">OEMs</Link></li>
-            <li><Link to="/management" className="hover:opacity-100 opacity-80">Management Team</Link></li>
-            <li><Link to="/contact" className="hover:opacity-100 opacity-80">Contact</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/partners">Partners</Link></li>
+            <li><Link to="/management-team">Management Team</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -52,23 +44,15 @@ export const Footer: React.FC = () => (
         <div>
           <div className="text-sm font-bold tracking-wide">CONTACT</div>
           <ul className="mt-3 space-y-2 text-sm opacity-90">
-            <li>
-              <a href="tel:+244944228887" className="hover:opacity-100 opacity-80">
-                +244 944 228 887
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@lps-hyprops.com" className="hover:opacity-100 opacity-80">
-                info@lps-hyprops.com
-              </a>
-            </li>
+            <li><a href="tel:+244944228887">+244 944 228 887</a></li>
+            <li><a href="mailto:info@lps-hyprops.com">info@lps-hyprops.com</a></li>
             <li>Talatona Condominio Mirantes, Case Número C18, Luanda – Angola</li>
             <li>Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola</li>
           </ul>
         </div>
       </div>
 
-      {/* Social Media */}
+      {/* Socials */}
       <div className="mt-8 flex gap-3">
         <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">F</a>
         <a href="#" target="_blank" rel="noopener noreferrer" className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center">X</a>
