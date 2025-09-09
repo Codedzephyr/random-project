@@ -1,6 +1,7 @@
 import React from "react";
 import { SectionTitle } from "../components/section-title";
 import { Card } from "../components/card";
+import PageHero from "../components/PageHero";
 
 const PROJECTS = [
   {
@@ -30,23 +31,29 @@ const PROJECTS = [
 ];
 
 const ProjectsPage: React.FC = () => (
-  <main className="bg-white py-16 lg:py-24">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <SectionTitle
-        eyebrow="OUR PROJECTS"
-        title="Delivering Excellence Across Oil & Gas"
-        subtitle="A snapshot of the projects and work scopes carried out by Hyprops-LPS."
-      />
+  <main>
+    {/* Hero Section */}
+    <PageHero title="Projects" image="/images/projects-hero.jpg" />
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PROJECTS.map((proj, idx) => (
-          <Card key={idx} className="p-6">
-            <h3 className="text-lg font-semibold">{proj.title}</h3>
-            <p className="mt-2 text-gray-600">{proj.desc}</p>
-          </Card>
-        ))}
+    {/* Page Content */}
+    <section className="bg-white py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionTitle
+          eyebrow="OUR PROJECTS"
+          title="Delivering Excellence Across Oil & Gas"
+          subtitle="A snapshot of the projects and work scopes carried out by Hyprops-LPS."
+        />
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {PROJECTS.map((proj, idx) => (
+            <Card key={idx} className="p-6">
+              <h3 className="text-lg font-semibold">{proj.title}</h3>
+              <p className="mt-2 text-gray-600">{proj.desc}</p>
+            </Card>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 );
 
