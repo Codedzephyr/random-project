@@ -24,7 +24,7 @@ export const ManagementTeamPage: React.FC = () => (
             name="Engr. [Dr.] Okezie Akwiwu"
             role="Group Managing Director / Chief Executive Officer"
             bio="An engineer by training and successful entrepreneur with 25+ years of experience in operations and management across the oil & gas industry. Founder and pioneer CEO of Hyprops Nigeria Limited, piloting it from inception to a major player today."
-            img="/images/Okezie-Akwiwu.jpg"
+            img="/images/Okezie-Akwiwu.png"
           />
           <TeamCard
             name="Engr. Ndukwe Akwiwu"
