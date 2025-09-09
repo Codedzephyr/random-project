@@ -8,6 +8,7 @@ import ProjectsPage from "./pages/projects";
 import PartnersPage from "./pages/partners";
 import CareersPage from "./pages/careers";
 import ContactPage from "./pages/contact";
+import AboutPage from "./pages/about";
 
 // ✅ New service pages
 import ManpowerOutsourcingPage from "./pages/manpower-outsourcing";
@@ -25,6 +26,7 @@ export default function App() {
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/management-team" element={<ManagementTeamPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
@@ -33,12 +35,30 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
 
             {/* ✅ New service routes */}
-            <Route path="/services/manpower-outsourcing" element={<ManpowerOutsourcingPage />} />
-            <Route path="/services/subsea-life-of-field" element={<SubseaLifeOfFieldPage />} />
-            <Route path="/services/engineering-solutions" element={<EngineeringSolutionsPage />} />
-            <Route path="/services/procurement-supply-chain" element={<ProcurementSupplyChainPage />} />
-            <Route path="/services/operations-maintenance" element={<OperationsMaintenancePage />} />
-            <Route path="/services/fabrication-construction" element={<FabricationConstructionPage />} />
+            <Route
+              path="/services/manpower-outsourcing"
+              element={<ManpowerOutsourcingPage />}
+            />
+            <Route
+              path="/services/subsea-life-of-field"
+              element={<SubseaLifeOfFieldPage />}
+            />
+            <Route
+              path="/services/engineering-solutions"
+              element={<EngineeringSolutionsPage />}
+            />
+            <Route
+              path="/services/procurement-supply-chain"
+              element={<ProcurementSupplyChainPage />}
+            />
+            <Route
+              path="/services/operations-maintenance"
+              element={<OperationsMaintenancePage />}
+            />
+            <Route
+              path="/services/fabrication-construction"
+              element={<FabricationConstructionPage />}
+            />
 
             {/* Fallback */}
             <Route path="*" element={<HomePage />} />
