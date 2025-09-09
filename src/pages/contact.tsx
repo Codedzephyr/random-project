@@ -6,7 +6,7 @@ const offices = [
   {
     id: "luanda",
     city: "Luanda Office",
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...YOUR_MAP_EMBED_HERE...",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6628813890693!2d13.193603975017512!3d-8.91089909114582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f5c26751e6f1%3A0xc2b151891ca73259!2sCondom%C3%ADnio%20Mirantes%20do%20Talatona!5e0!3m2!1sen!2sng!4v1757425383094!5m2!1sen!2sng",
     address: "Talatona Condominio Mirantes, Case Número C18, Luanda – Angola",
     email: "info@lps-hyprops.com",
     phone: "+244 944 228 887",
@@ -14,7 +14,7 @@ const offices = [
   {
     id: "cabinda",
     city: "Cabinda Office",
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...YOUR_MAP_EMBED_HERE...",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0402093567495!2d12.188633674307026!3d-5.561058994419398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a5dd3a087964861%3A0x9b7469f33c288a28!2sR.%20de%20Timor%2C%20Cabinda%2C%20Angola!5e0!3m2!1sen!2sng!4v1757425860875!5m2!1sen!2sng",
     address: "Rua de Timor Casa S/N, Bairro Marien Ngouabi, Cabinda – Angola",
     email: "info@lps-hyprops.com",
     phone: "+244 944 228 887",
@@ -50,6 +50,8 @@ const ContactPage: React.FC = () => (
                   width="100%"
                   height="100%"
                   loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg border"
                 ></iframe>
               </div>
