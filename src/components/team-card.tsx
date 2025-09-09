@@ -1,8 +1,5 @@
 import React from "react";
 import { Card } from "./card";
-import { PlaceholderImage } from "./placeholder-image";
-// import { Card } from "../../components/ui/Card";
-// import { PlaceholderImage } from "../../components/ui/PlaceholderImage";
 
 export const TeamCard: React.FC<{
   name: string;
@@ -11,11 +8,17 @@ export const TeamCard: React.FC<{
   img: string;
 }> = ({ name, role, bio, img }) => (
   <Card>
-    <div className="grid gap-6 p-6 sm:grid-cols-3">
-      <PlaceholderImage
-        className="aspect-[4/5] sm:col-span-1"
-        label="Portrait"
-      />
+    <div className="grid gap-6 p-6 sm:grid-cols-3 items-start">
+      {/* Portrait Image on the left */}
+      <div className="sm:col-span-1">
+        <img
+          src={img}
+          alt={name}
+          className="w-full aspect-[4/5] object-cover rounded-lg"
+        />
+      </div>
+
+      {/* Text content on the right */}
       <div className="sm:col-span-2">
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -36,7 +39,6 @@ export const TeamCard: React.FC<{
           </div>
         </div>
         <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{bio}</p>
-        <img src={img} alt="background" />
       </div>
     </div>
   </Card>
