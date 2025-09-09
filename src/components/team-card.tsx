@@ -8,7 +8,8 @@ export const TeamCard: React.FC<{
   name: string;
   role: string;
   bio: string;
-}> = ({ name, role, bio }) => (
+  img: string;
+}> = ({ name, role, bio, img }) => (
   <Card>
     <div className="grid gap-6 p-6 sm:grid-cols-3">
       <PlaceholderImage
@@ -35,6 +36,7 @@ export const TeamCard: React.FC<{
           </div>
         </div>
         <p className="mt-3 text-sm text-neutral-600 leading-relaxed">{bio}</p>
+        <img src={img} alt="background" />
       </div>
     </div>
   </Card>
