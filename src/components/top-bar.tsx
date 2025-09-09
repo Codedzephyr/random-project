@@ -20,9 +20,7 @@ const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
 export const TopBar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
-  // ✅ Nav links must match exactly with App.tsx routes
   const nav = [
-    { to: "/", label: "Home" },
     { to: "/management-team", label: "Management Team" },
     { to: "/services", label: "Services" },
     { to: "/projects", label: "Projects" },
@@ -33,11 +31,15 @@ export const TopBar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-30 w-full border-b border-neutral-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="group inline-flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-neutral-900" />
+          {/* Left - Logo */}
+          <Link to="/" className="group inline-flex items-center gap-2 flex-shrink-0">
+            <img
+              src="/images/logo.png"
+              alt="Hyprops-LPS Logo"
+              className="h-8 w-8 object-contain"
+            />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight group-hover:opacity-90">
                 HYPROPS-LPS
@@ -48,21 +50,22 @@ export const TopBar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center">
+          {/* Center - Menu */}
+          <nav className="hidden md:flex items-center flex-1 justify-center">
             {nav.map((n) => (
               <NavA key={n.to} to={n.to} label={n.label} />
             ))}
           </nav>
 
-          {/* Actions */}
-          <div className="flex items-center gap-3">
+          {/* Right - CTA */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <Link
               to="/contact"
               className="hidden md:inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90"
             >
               Get in touch
             </Link>
+            {/* Mobile Menu Button */}
             <button
               className="inline-flex md:hidden items-center justify-center rounded-xl border border-neutral-200 p-2"
               onClick={() => setOpen((v) => !v)}
@@ -88,7 +91,7 @@ export const TopBar: React.FC = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col">
+          <div className="px-4 sm:px-6 lg:px-8 py-3 flex flex-col">
             {nav.map((n) => (
               <NavLink
                 key={n.to}
