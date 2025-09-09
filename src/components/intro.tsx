@@ -1,12 +1,17 @@
 import React from "react";
 import { Card } from "./card";
-import { PlaceholderImage } from "./placeholder-image";
 
 export const Intro: React.FC = () => (
   <section className="bg-white">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
       <div className="grid gap-8 lg:grid-cols-2 items-center">
-        <PlaceholderImage className="aspect-[4/3]" label="Head office photo" />
+        {/* Replace placeholder with actual image */}
+        <img
+          src="/images/home-section-1.jpg"
+          alt="Hyprops-LPS Head Office"
+          className="rounded-lg shadow-md object-cover w-full h-80"
+        />
+
         <Card>
           <div className="p-8">
             <h4 className="text-sm font-bold text-sky-700">
@@ -40,7 +45,7 @@ export const Intro: React.FC = () => (
         </Card>
       </div>
 
-      {/* Stats - optional, can be removed if no data available */}
+      {/* Stats */}
       <div className="mt-10 grid grid-cols-2 gap-4 md:max-w-md">
         {[
           { k: "Years of Experience", v: "—" },
