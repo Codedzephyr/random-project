@@ -19,26 +19,35 @@ const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
 
 export const TopBar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const nav = [
     { to: "/management-team", label: "Management Team" },
-    { to: "/services", label: "Services" },
     { to: "/projects", label: "Projects" },
     { to: "/partners", label: "Partners" },
     { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },
   ];
 
+  const services = [
+    { to: "/services#engineering", label: "Engineering, Procurement & Fabrication" },
+    { to: "/services#construction", label: "Construction & Installation" },
+    { to: "/services#subsea", label: "Subsea Life of Field" },
+    { to: "/services#facilities", label: "Facilities O&M" },
+    { to: "/services#manpower", label: "Manpower Outsourcing" },
+    { to: "/services#scm", label: "Supply Chain Management" },
+  ];
+
   return (
     <header className="sticky top-0 z-30 w-full border-b border-neutral-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Left - Logo */}
-          <Link to="/" className="group inline-flex items-center gap-2 flex-shrink-0">
+          {/* Logo */}
+          <Link to="/" className="group inline-flex items-center gap-2">
             <img
               src="/images/logo.png"
               alt="Hyprops-LPS Logo"
-              className="h-12 w-auto object-contain"
+              className="max-h-10 w-auto object-contain"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight group-hover:opacity-90">
@@ -50,22 +59,46 @@ export const TopBar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Center - Menu */}
-          <nav className="hidden md:flex items-center flex-1 justify-center">
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex items-center gap-6">
+            {/* Services Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button className="text-sm md:text-[15px] font-medium px-3 py-2 hover:text-neutral-900 text-neutral-700">
+                Services ▾
+              </button>
+              {servicesOpen && (
+                <div className="absolute left-0 mt-2 w-72 bg-white border border-neutral-200 shadow-lg rounded-lg">
+                  {services.map((s) => (
+                    <NavLink
+                      key={s.to}
+                      to={s.to}
+                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                    >
+                      {s.label}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Other Nav Links */}
             {nav.map((n) => (
               <NavA key={n.to} to={n.to} label={n.label} />
             ))}
           </nav>
 
-          {/* Right - CTA */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Actions */}
+          <div className="flex items-center gap-3">
             <Link
               to="/contact"
               className="hidden md:inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90"
             >
               Get in touch
             </Link>
-            {/* Mobile Menu Button */}
             <button
               className="inline-flex md:hidden items-center justify-center rounded-xl border border-neutral-200 p-2"
               onClick={() => setOpen((v) => !v)}
@@ -91,7 +124,27 @@ export const TopBar: React.FC = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
-          <div className="px-4 sm:px-6 lg:px-8 py-3 flex flex-col">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col">
+            {/* Services Submenu */}
+            <details>
+              <summary className="px-3 py-2 text-sm font-medium cursor-pointer">
+                Services
+              </summary>
+              <div className="pl-4">
+                {services.map((s) => (
+                  <NavLink
+                    key={s.to}
+                    to={s.to}
+                    onClick={() => setOpen(false)}
+                    className="block px-3 py-2 text-sm text-neutral-700"
+                  >
+                    {s.label}
+                  </NavLink>
+                ))}
+              </div>
+            </details>
+
+            {/* Other links */}
             {nav.map((n) => (
               <NavLink
                 key={n.to}
@@ -102,6 +155,7 @@ export const TopBar: React.FC = () => {
                 {n.label}
               </NavLink>
             ))}
+
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
