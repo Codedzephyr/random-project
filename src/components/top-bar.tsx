@@ -38,7 +38,7 @@ export const TopBar: React.FC = () => {
             <img
               src="/images/logo.png"
               alt="Hyprops-LPS Logo"
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight group-hover:opacity-90">
