@@ -30,12 +30,12 @@ export const TopBar: React.FC = () => {
   ];
 
   const services = [
-    { to: "/services#engineering", label: "Engineering, Procurement & Fabrication" },
-    { to: "/services#construction", label: "Construction & Installation" },
-    { to: "/services#subsea", label: "Subsea Life of Field" },
-    { to: "/services#facilities", label: "Facilities O&M" },
-    { to: "/services#manpower", label: "Manpower Outsourcing" },
-    { to: "/services#scm", label: "Supply Chain Management" },
+    { to: "/services/engineering-solutions", label: "Engineering Solutions" },
+    { to: "/services/fabrication-construction", label: "Fabrication & Construction" },
+    { to: "/services/subsea-life-of-field", label: "Subsea Life of Field" },
+    { to: "/services/operations-maintenance", label: "Operations & Maintenance" },
+    { to: "/services/manpower-outsourcing", label: "Manpower Outsourcing" },
+    { to: "/services/procurement-supply-chain", label: "Procurement & Supply Chain" },
   ];
 
   return (
@@ -47,7 +47,7 @@ export const TopBar: React.FC = () => {
             <img
               src="/images/logo.png"
               alt="Hyprops-LPS Logo"
-              className="max-h-10 w-auto object-contain"
+              className="max-h-12 w-auto object-contain"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight group-hover:opacity-90">
@@ -61,15 +61,18 @@ export const TopBar: React.FC = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-6">
-            {/* Services Dropdown */}
+            {/* Services Dropdown (clickable link + dropdown) */}
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="text-sm md:text-[15px] font-medium px-3 py-2 hover:text-neutral-900 text-neutral-700">
+              <NavLink
+                to="/services"
+                className="text-sm md:text-[15px] font-medium px-3 py-2 hover:text-neutral-900 text-neutral-700"
+              >
                 Services ▾
-              </button>
+              </NavLink>
               {servicesOpen && (
                 <div className="absolute left-0 mt-2 w-72 bg-white border border-neutral-200 shadow-lg rounded-lg">
                   {services.map((s) => (
@@ -128,7 +131,7 @@ export const TopBar: React.FC = () => {
             {/* Services Submenu */}
             <details>
               <summary className="px-3 py-2 text-sm font-medium cursor-pointer">
-                Services
+                <Link to="/services">Services</Link>
               </summary>
               <div className="pl-4">
                 {services.map((s) => (
