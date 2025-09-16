@@ -20,9 +20,7 @@ export const TopBar: React.FC = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const about = [
-    { to: "/about", label: "About Us" },
-  ];
+  const about = [{ to: "/about", label: "About Us" }];
 
   const services = [
     { to: "/services/engineering-solutions", label: "Engineering Solutions" },
@@ -43,12 +41,16 @@ export const TopBar: React.FC = () => {
   return (
     <header className="sticky top-0 z-30 bg-white/90 border-b border-neutral-200 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
+        {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
-          <img src="/images/logo.png" alt="LPS-HYPROPS Logo" className="max-h-16" />
-          <div className="flex flex-col">
-          </div>
+          <img
+            src="/images/logo.png"
+            alt="LPS-HYPROPS Logo"
+            className="max-h-16 w-auto object-contain"
+          />
         </Link>
 
+        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
           {/* About Us Dropdown */}
           <div
@@ -63,12 +65,12 @@ export const TopBar: React.FC = () => {
               About Us ▾
             </NavLink>
             {aboutOpen && (
-              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2">
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-neutral-200 shadow-lg rounded-lg">
                 {about.map((a) => (
                   <NavLink
                     key={a.to}
                     to={a.to}
-                    className="block px-4 py-2 text-sm hover:bg-neutral-100"
+                    className="block px-5 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
                   >
                     {a.label}
                   </NavLink>
@@ -90,12 +92,12 @@ export const TopBar: React.FC = () => {
               Services ▾
             </NavLink>
             {servicesOpen && (
-              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2">
+              <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-neutral-200 shadow-lg rounded-lg">
                 {services.map((s) => (
                   <NavLink
                     key={s.to}
                     to={s.to}
-                    className="block px-4 py-2 text-sm hover:bg-neutral-100"
+                    className="block px-5 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
                   >
                     {s.label}
                   </NavLink>
@@ -117,11 +119,17 @@ export const TopBar: React.FC = () => {
           aria-label="Toggle menu"
         >
           <svg width="20" height="20" viewBox="0 0 24 24">
-            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" fill="none"/>
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              strokeWidth="2"
+              fill="none"
+            />
           </svg>
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white border-t border-neutral-200">
           <div className="px-4 py-3">
@@ -130,7 +138,11 @@ export const TopBar: React.FC = () => {
               <ul className="pl-4">
                 {about.map((a) => (
                   <li key={a.to}>
-                    <NavLink to={a.to} onClick={() => setOpen(false)} className="block py-1">
+                    <NavLink
+                      to={a.to}
+                      onClick={() => setOpen(false)}
+                      className="block py-1"
+                    >
                       {a.label}
                     </NavLink>
                   </li>
@@ -142,7 +154,11 @@ export const TopBar: React.FC = () => {
               <ul className="pl-4">
                 {services.map((s) => (
                   <li key={s.to}>
-                    <NavLink to={s.to} onClick={() => setOpen(false)} className="block py-1">
+                    <NavLink
+                      to={s.to}
+                      onClick={() => setOpen(false)}
+                      className="block py-1"
+                    >
                       {s.label}
                     </NavLink>
                   </li>
