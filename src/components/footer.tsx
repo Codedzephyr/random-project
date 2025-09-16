@@ -53,7 +53,7 @@ export const Footer: React.FC = () => (
               <Link to="/partners">Partners</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">About US</Link>
             </li>
             <li>
               <Link to="/careers">Careers</Link>
