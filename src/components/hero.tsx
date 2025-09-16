@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Hero: React.FC = () => (
-  <section className="relative min-h-[screen] w-full overflow-hidden">
+  <section className="relative min-h-screen w-full overflow-hidden">
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img
@@ -14,7 +14,7 @@ export const Hero: React.FC = () => (
     </div>
 
     {/* Content */}
-    <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 flex items-center">
+    <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
       <div className="w-full text-center text-white">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide">
           DELIVERING QUALITY SERVICE AND
