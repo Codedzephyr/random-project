@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "./card";
 import { SectionTitle } from "./section-title";
 
 export const Partners: React.FC = () => (
