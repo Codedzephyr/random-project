@@ -8,14 +8,14 @@ export const Intro: React.FC = () => (
         {/* Replace placeholder with actual image */}
         <img
           src="/images/home-section-1.jpg"
-          alt="Hyprops-LPS Head Office"
+          alt="LPS-HYPROPS Head Office"
           className="rounded-lg shadow-md object-cover w-full h-80"
         />
 
         <Card>
           <div className="p-8">
             <h4 className="text-sm font-bold text-sky-700">
-              Welcome to Hyprops-LPS
+              Welcome to LPS-HYPROPS
             </h4>
             <h3 className="mt-2 text-2xl md:text-3xl font-extrabold tracking-tight">
               LOCAL CONTENT
@@ -43,24 +43,6 @@ export const Intro: React.FC = () => (
             </button>
           </div>
         </Card>
-      </div>
-
-      {/* Stats */}
-      <div className="mt-10 grid grid-cols-2 gap-4 md:max-w-md">
-        {[
-          { k: "Years of Experience", v: "—" },
-          { k: "Projects Completed", v: "—" },
-        ].map((s) => (
-          <div
-            key={s.k}
-            className="rounded-xl border border-neutral-200 bg-white p-5 text-center"
-          >
-            <div className="text-2xl font-extrabold">{s.v}</div>
-            <div className="mt-1 text-xs tracking-wide text-neutral-500">
-              {s.k.toUpperCase()}
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   </section>
