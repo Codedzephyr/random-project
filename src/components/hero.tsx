@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Hero: React.FC = () => (
-  <section className="relative min-h-[76vh] w-full overflow-hidden">
+  <section className="relative min-h-[screen] w-full overflow-hidden">
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img
