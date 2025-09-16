@@ -43,7 +43,7 @@ export const TopBar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
           <img
-            src="/images/logo.png"
+            src="/images/newlogo.png"
             alt="LPS-HYPROPS Logo"
             className="max-h-16"
           />
