@@ -9,19 +9,19 @@ const partners = [
   {
     id: "spongejet",
     title: "Sponge-Jet",
-    img: "/images/partners/spongejet.jpg",
+    img: "/images/spongejet.jpg",
   },
   {
     id: "tesla",
     title: "Tesla Nanocoatings",
-    img: "/images/partners/tesla.jpg",
+    img: "/images/tesla.jpg",
   },
   { id: "durapol", title: "DuraPol", img: "/images/partners/durapol.jpg" },
   { id: "hcs", title: "HCS Control Systems", img: "/images/partners/hcs.jpg" },
   {
     id: "pico",
     title: "Pico Flow Controls (AYMO)",
-    img: "/images/partners/pico.jpg",
+    img: "/images/pico.jpg",
   },
 ];
 
