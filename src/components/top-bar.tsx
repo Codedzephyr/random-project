@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
+const NavA: React.FC<{ to: string; label: string; scrolled: boolean }> = ({
+  to,
+  label,
+  scrolled,
+}) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
-      `text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
-        isActive ? "text-white" : "text-white hover:text-gray-200"
+      `text-sm md:text-[15px] font-medium px-3 py-2 transition ${
+        isActive
+          ? scrolled
+            ? "text-neutral-900"
+            : "text-white"
+          : scrolled
+          ? "text-neutral-700 hover:text-neutral-900"
+          : "text-white hover:text-neutral-200"
       }`
     }
     end
@@ -19,8 +29,16 @@ export const TopBar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const about = [{ to: "/about", label: "About Us" }];
+
   const services = [
     { to: "/services/engineering-solutions", label: "Engineering Solutions" },
     { to: "/services/fabrication-construction", label: "Fabrication & Construction" },
@@ -29,6 +47,7 @@ export const TopBar: React.FC = () => {
     { to: "/services/manpower-outsourcing", label: "Manpower Outsourcing" },
     { to: "/services/procurement-supply-chain", label: "Procurement & Supply Chain" },
   ];
+
   const nav = [
     { to: "/projects", label: "Projects" },
     { to: "/partners", label: "Partners" },
@@ -37,9 +56,14 @@ export const TopBar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-transparent">
+    <header
+      className={`sticky top-0 z-30 transition-all ${
+        scrolled
+          ? "bg-white border-b border-neutral-200"
+          : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
           <img
             src="/images/logo.png"
@@ -48,7 +72,6 @@ export const TopBar: React.FC = () => {
           />
         </Link>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
           {/* About Us Dropdown */}
           <div
@@ -58,17 +81,19 @@ export const TopBar: React.FC = () => {
           >
             <NavLink
               to="/about"
-              className="px-3 py-2 text-sm font-medium text-white hover:text-gray-200"
+              className={`px-3 py-2 text-sm font-medium ${
+                scrolled ? "text-neutral-700 hover:text-neutral-900" : "text-white hover:text-neutral-200"
+              }`}
             >
               About Us ▾
             </NavLink>
             {aboutOpen && (
-              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2 w-64">
+              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2">
                 {about.map((a) => (
                   <NavLink
                     key={a.to}
                     to={a.to}
-                    className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                    className="block px-4 py-2 text-sm hover:bg-neutral-100 text-neutral-700"
                   >
                     {a.label}
                   </NavLink>
@@ -85,7 +110,9 @@ export const TopBar: React.FC = () => {
           >
             <NavLink
               to="/services"
-              className="px-3 py-2 text-sm font-medium text-white hover:text-gray-200"
+              className={`px-3 py-2 text-sm font-medium ${
+                scrolled ? "text-neutral-700 hover:text-neutral-900" : "text-white hover:text-neutral-200"
+              }`}
             >
               Services ▾
             </NavLink>
@@ -106,13 +133,13 @@ export const TopBar: React.FC = () => {
 
           {/* Other Nav Links */}
           {nav.map((n) => (
-            <NavA key={n.to} to={n.to} label={n.label} />
+            <NavA key={n.to} to={n.to} label={n.label} scrolled={scrolled} />
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 border border-white/30 rounded text-white"
+          className="md:hidden p-2 border border-neutral-200 rounded"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -126,48 +153,6 @@ export const TopBar: React.FC = () => {
           </svg>
         </button>
       </div>
-
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black/80 text-white border-t border-white/20">
-          <div className="px-4 py-3">
-            <details className="mb-2">
-              <summary className="font-medium cursor-pointer">About Us</summary>
-              <ul className="pl-4">
-                {about.map((a) => (
-                  <li key={a.to}>
-                    <NavLink to={a.to} onClick={() => setOpen(false)} className="block py-1">
-                      {a.label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </details>
-            <details className="mb-2">
-              <summary className="font-medium cursor-pointer">Services</summary>
-              <ul className="pl-4">
-                {services.map((s) => (
-                  <li key={s.to}>
-                    <NavLink to={s.to} onClick={() => setOpen(false)} className="block py-1">
-                      {s.label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </details>
-            {nav.map((n) => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                onClick={() => setOpen(false)}
-                className="block py-2"
-              >
-                {n.label}
-              </NavLink>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   );
 };
