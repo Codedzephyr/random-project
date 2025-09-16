@@ -6,9 +6,7 @@ const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
     to={to}
     className={({ isActive }) =>
       `text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
-        isActive
-          ? "nav-active"
-          : "nav-inactive"
+        isActive ? "text-neutral-900" : "hover:text-neutral-900"
       }`
     }
     end
@@ -54,7 +52,6 @@ export const TopBar: React.FC = () => {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
           <img
             src="/images/logo.png"
@@ -63,9 +60,8 @@ export const TopBar: React.FC = () => {
           />
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {/* About Us Dropdown */}
+          {/* About Us */}
           <div
             className="relative"
             onMouseEnter={() => setAboutOpen(true)}
@@ -74,7 +70,7 @@ export const TopBar: React.FC = () => {
             <NavLink
               to="/about"
               className={`px-3 py-2 text-sm font-medium ${
-                scrolled ? "text-neutral-700 hover:text-neutral-900" : "text-white hover:text-neutral-200"
+                scrolled ? "text-neutral-700" : "text-white"
               }`}
             >
               About Us ▾
@@ -85,7 +81,7 @@ export const TopBar: React.FC = () => {
                   <NavLink
                     key={a.to}
                     to={a.to}
-                    className="block px-4 py-2 text-sm hover:bg-neutral-100 text-neutral-700"
+                    className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
                   >
                     {a.label}
                   </NavLink>
@@ -94,7 +90,7 @@ export const TopBar: React.FC = () => {
             )}
           </div>
 
-          {/* Services Dropdown */}
+          {/* Services */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -103,7 +99,7 @@ export const TopBar: React.FC = () => {
             <NavLink
               to="/services"
               className={`px-3 py-2 text-sm font-medium ${
-                scrolled ? "text-neutral-700 hover:text-neutral-900" : "text-white hover:text-neutral-200"
+                scrolled ? "text-neutral-700" : "text-white"
               }`}
             >
               Services ▾
@@ -123,15 +119,13 @@ export const TopBar: React.FC = () => {
             )}
           </div>
 
-          {/* Other Nav Items */}
+          {/* Other links */}
           {nav.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
-              className={`text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
-                scrolled
-                  ? "text-neutral-700 hover:text-neutral-900"
-                  : "text-white hover:text-neutral-200"
+              className={`px-3 py-2 text-sm font-medium ${
+                scrolled ? "text-neutral-700" : "text-white"
               }`}
             >
               {n.label}
@@ -139,7 +133,7 @@ export const TopBar: React.FC = () => {
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile toggle */}
         <button
           className="md:hidden p-2 border border-neutral-200 rounded"
           onClick={() => setOpen((v) => !v)}
