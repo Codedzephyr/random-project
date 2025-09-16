@@ -44,9 +44,8 @@ export const TopBar: React.FC = () => {
     <header className="sticky top-0 z-30 bg-white/90 border-b border-neutral-200 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
         <Link to="/" className="inline-flex items-center gap-2">
-          <img src="/images/logo.png" alt="LPS-HYPROPS Logo" className="max-h-12" />
+          <img src="/images/logo.png" alt="LPS-HYPROPS Logo" className="max-h-16" />
           <div className="flex flex-col">
-            <span className="text-lg font-bold">LPS-HYPROPS</span>
           </div>
         </Link>
 
