@@ -15,8 +15,8 @@ export const Hero: React.FC = () => (
 
     {/* Centered content */}
     <div className="absolute inset-0 z-10 flex items-center justify-center">
-      <div className="mx-auto max-w-5xl px-4 text-center text-white">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-wide leading-snug">
+      <div className="mx-auto max-w-7xl px-4 text-center text-white">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-wide leading-snug whitespace-pre-line">
           DELIVERING QUALITY SERVICE AND
           <br />
           UNPARALLELLED INDUSTRY EXPERTISE
