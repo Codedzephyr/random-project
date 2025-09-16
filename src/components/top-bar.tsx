@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-const NavA: React.FC<{ to: string; label: string; scrolled: boolean }> = ({
-  to,
-  label,
-  scrolled,
-}) => (
+const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
-      `text-sm md:text-[15px] font-medium px-3 py-2 transition ${
+      `text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
         isActive
-          ? scrolled
-            ? "text-neutral-900"
-            : "text-white"
-          : scrolled
-          ? "text-neutral-700 hover:text-neutral-900"
-          : "text-white hover:text-neutral-200"
+          ? "nav-active"
+          : "nav-inactive"
       }`
     }
     end
@@ -58,12 +50,11 @@ export const TopBar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-30 transition-all ${
-        scrolled
-          ? "bg-white border-b border-neutral-200"
-          : "bg-transparent"
+        scrolled ? "bg-white border-b border-neutral-200" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
+        {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
           <img
             src="/images/logo.png"
@@ -72,6 +63,7 @@ export const TopBar: React.FC = () => {
           />
         </Link>
 
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           {/* About Us Dropdown */}
           <div
@@ -88,7 +80,7 @@ export const TopBar: React.FC = () => {
               About Us ▾
             </NavLink>
             {aboutOpen && (
-              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2">
+              <div className="absolute top-full left-0 bg-white border border-neutral-200 shadow-lg rounded-lg mt-2 w-56">
                 {about.map((a) => (
                   <NavLink
                     key={a.to}
@@ -131,13 +123,23 @@ export const TopBar: React.FC = () => {
             )}
           </div>
 
-          {/* Other Nav Links */}
+          {/* Other Nav Items */}
           {nav.map((n) => (
-            <NavA key={n.to} to={n.to} label={n.label} scrolled={scrolled} />
+            <NavLink
+              key={n.to}
+              to={n.to}
+              className={`text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
+                scrolled
+                  ? "text-neutral-700 hover:text-neutral-900"
+                  : "text-white hover:text-neutral-200"
+              }`}
+            >
+              {n.label}
+            </NavLink>
           ))}
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
           className="md:hidden p-2 border border-neutral-200 rounded"
           onClick={() => setOpen((v) => !v)}
