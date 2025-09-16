@@ -22,7 +22,6 @@ export const TopBar: React.FC = () => {
 
   const about = [
     { to: "/about", label: "About Us" },
-    { to: "/management-team", label: "Management Team" },
   ];
 
   const services = [
