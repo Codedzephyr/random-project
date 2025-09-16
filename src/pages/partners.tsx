@@ -7,31 +7,31 @@ const partners = [
     id: "spongejet",
     title: "Sponge-Jet",
     desc: `Leader in clean, dry, low-dust abrasive blasting. Benefits include reduced rework, minimized equipment risk, and cost savings through reusable blasting media.`,
-    img: "/images/partners/spongejet.jpg",
+    img: "/images/spongejet.jpg",
   },
   {
     id: "tesla",
     title: "Tesla Nanocoatings",
     desc: `Cutting-edge nano-based two-coat paint systems offering superior corrosion protection, UV and weather resilience, and long surface lifetime.`,
-    img: "/images/partners/tesla.jpg",
+    img: "/images/tesla.jpg",
   },
   {
     id: "durapol",
     title: "DuraPol",
     desc: `Advanced anti-corrosion coatings designed for highly acidic environments across industries like oil & gas, petrochemical, wastewater, and marine.`,
-    img: "/images/partners/durapol.jpg",
+    img: "/images/durapol.png",
   },
   {
     id: "hcs",
     title: "HCS Control Systems",
     desc: `Design, manufacture, and maintenance of subsea distribution units, hydraulic production systems, and topside control equipment.`,
-    img: "/images/partners/hcs.jpg",
+    img: "/images/hcs.jpg",
   },
   {
     id: "pico",
     title: "Pico Flow Controls (AYMO)",
     desc: `Cloud-based Pipeline Integrity Management System providing real-time monitoring, anomaly detection, corrosion prediction, and maintenance planning.`,
-    img: "/images/partners/pico.jpg",
+    img: "/images/pico.jpg",
   },
 ];
 
