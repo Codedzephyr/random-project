@@ -7,7 +7,7 @@ export const Footer: React.FC = () => (
       <div className="grid gap-10 md:grid-cols-4 items-start">
         {/* Company */}
         <div>
-          <div className="font-extrabold text-lg">HYPROPS-LPS</div>
+          <div className="font-extrabold text-lg">LPS-HYPROPS</div>
           <div className="text-[11px] opacity-80">
             LOCAL CONTENT | GLOBAL STANDARDS
           </div>
