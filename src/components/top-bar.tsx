@@ -22,20 +22,23 @@ export const TopBar: React.FC = () => {
 
   // Detect scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20); // add bg after scrolling
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Check if we’re on the homepage
-  const isHome = location.pathname === "/" || location.pathname === "/#";
+  // Check if we’re on the homepage (works for HashRouter too)
+  const isHome =
+    location.pathname === "/" ||
+    location.pathname === "" ||
+    location.hash === "#/" ||
+    location.hash === "";
 
-  // Background logic
-  const headerClasses = isHome && !scrolled
-    ? "bg-transparent border-transparent"
-    : "bg-white/90 border-b border-neutral-200 backdrop-blur";
+  // Header background classes
+  const headerClasses =
+    isHome && !scrolled
+      ? "bg-transparent border-transparent"
+      : "bg-white/90 border-b border-neutral-200 backdrop-blur";
 
   return (
     <header
