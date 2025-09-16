@@ -21,7 +21,7 @@ const partners = [
   {
     id: "pico",
     title: "Pico Flow Controls (AYMO)",
-    img: "/images/pico.jpg",
+    img: "/images/pico.png",
   },
 ];
 
