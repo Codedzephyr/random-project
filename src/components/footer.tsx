@@ -11,9 +11,6 @@ export const Footer: React.FC = () => (
           <div className="text-[11px] opacity-80">
             LOCAL CONTENT | GLOBAL STANDARDS
           </div>
-          <div className="mt-4 h-20 w-40 rounded-lg bg-white/10 flex items-center justify-center text-xs">
-            ISO Badge
-          </div>
         </div>
 
         {/* Services Links */}
@@ -56,7 +53,7 @@ export const Footer: React.FC = () => (
               <Link to="/partners">Partners</Link>
             </li>
             <li>
-              <Link to="/management-team">Management Team</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/careers">Careers</Link>
