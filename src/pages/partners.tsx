@@ -31,7 +31,7 @@ const partners = [
     id: "pico",
     title: "Pico Flow Controls (AYMO)",
     desc: `Cloud-based Pipeline Integrity Management System providing real-time monitoring, anomaly detection, corrosion prediction, and maintenance planning.`,
-    img: "/images/pico.jpg",
+    img: "/images/pico.png",
   },
 ];
 
