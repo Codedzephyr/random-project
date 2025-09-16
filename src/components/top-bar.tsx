@@ -5,7 +5,7 @@ const NavA: React.FC<{ to: string; label: string }> = ({ to, label }) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
-      `text-sm md:text-[15px] font-medium px-3 py-2 transition-colors ${
+      `text-sm md:text-[15px] font-medium px-3 py-2 transition ${
         isActive ? "text-neutral-900" : "hover:text-neutral-900"
       }`
     }
@@ -22,13 +22,12 @@ export const TopBar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const about = [{ to: "/about", label: "About Us" }];
-
   const services = [
     { to: "/services/engineering-solutions", label: "Engineering Solutions" },
     { to: "/services/fabrication-construction", label: "Fabrication & Construction" },
@@ -37,7 +36,6 @@ export const TopBar: React.FC = () => {
     { to: "/services/manpower-outsourcing", label: "Manpower Outsourcing" },
     { to: "/services/procurement-supply-chain", label: "Procurement & Supply Chain" },
   ];
-
   const nav = [
     { to: "/projects", label: "Projects" },
     { to: "/partners", label: "Partners" },
@@ -48,31 +46,22 @@ export const TopBar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-30 transition-all ${
-        scrolled ? "bg-white border-b border-neutral-200" : "bg-transparent"
+        scrolled ? "bg-white border-b border-neutral-200 text-neutral-700" : "bg-transparent text-white"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
         <Link to="/" className="inline-flex items-center gap-2">
-          <img
-            src="/images/logo.png"
-            alt="LPS-HYPROPS Logo"
-            className="max-h-16"
-          />
+          <img src="/images/logo.png" alt="LPS-HYPROPS Logo" className="max-h-16" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          {/* About Us */}
+          {/* About Us Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setAboutOpen(true)}
             onMouseLeave={() => setAboutOpen(false)}
           >
-            <NavLink
-              to="/about"
-              className={`px-3 py-2 text-sm font-medium ${
-                scrolled ? "text-neutral-700" : "text-white"
-              }`}
-            >
+            <NavLink to="/about" className="px-3 py-2 text-sm font-medium">
               About Us ▾
             </NavLink>
             {aboutOpen && (
@@ -90,18 +79,13 @@ export const TopBar: React.FC = () => {
             )}
           </div>
 
-          {/* Services */}
+          {/* Services Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <NavLink
-              to="/services"
-              className={`px-3 py-2 text-sm font-medium ${
-                scrolled ? "text-neutral-700" : "text-white"
-              }`}
-            >
+            <NavLink to="/services" className="px-3 py-2 text-sm font-medium">
               Services ▾
             </NavLink>
             {servicesOpen && (
@@ -119,17 +103,9 @@ export const TopBar: React.FC = () => {
             )}
           </div>
 
-          {/* Other links */}
+          {/* Other Nav Links */}
           {nav.map((n) => (
-            <NavLink
-              key={n.to}
-              to={n.to}
-              className={`px-3 py-2 text-sm font-medium ${
-                scrolled ? "text-neutral-700" : "text-white"
-              }`}
-            >
-              {n.label}
-            </NavLink>
+            <NavA key={n.to} to={n.to} label={n.label} />
           ))}
         </nav>
 
