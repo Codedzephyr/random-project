@@ -39,11 +39,11 @@ export const TopBar: React.FC = () => {
         isTransparent ? "bg-transparent border-transparent" : "bg-white/90 border-b border-neutral-200 backdrop-blur"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="inline-flex items-center gap-2">
           <img
-            src="/images/logo.png"
+            src="/logo.png"
             alt="LPS-HYPROPS Logo"
             className="max-h-16"
           />
