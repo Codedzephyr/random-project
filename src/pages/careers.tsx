@@ -13,7 +13,7 @@ const CareersPage: React.FC = () => (
         <SectionTitle
           eyebrow="CAREERS"
           title="Join Our Team"
-          subtitle="At Hyprops-LPS, we believe in developing talent and growing together."
+          subtitle="At LPS-Hyprops, we believe in developing talent and growing together."
         />
         <p className="mt-6 text-neutral-600">
           (Details about open positions and recruitment processes will be placed here.)
