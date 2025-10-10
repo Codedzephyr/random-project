@@ -17,11 +17,6 @@ export const Intro: React.FC = () => (
             <h4 className="text-sm font-bold text-sky-700">
               Welcome to LPS-HYPROPS
             </h4>
-            <h3 className="mt-2 text-2xl md:text-3xl font-extrabold tracking-tight">
-              LOCAL CONTENT
-              <br />
-              GLOBAL STANDARDS
-            </h3>
             <p className="mt-3 text-neutral-600 leading-relaxed">
               LPS Hyprops – Oil & Gas Service, LDA is an Angolan-owned joint
               venture between LPS Lda and Hyprops Nigeria Limited, representing
