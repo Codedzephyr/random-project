@@ -45,7 +45,7 @@ export const TopBar: React.FC = () => {
           <img
             src="/logo.png"
             alt="LPS-HYPROPS Logo"
-            className="max-h-16"
+            className="max-h-20"
           />
         </Link>
 
