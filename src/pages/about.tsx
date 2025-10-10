@@ -27,30 +27,6 @@ const AboutPage: React.FC = () => (
           of companies and regulators within the oil and gas sector. We have offices in
           Luanda and Cabinda. Our fabrication bases are also in both locations.
         </p>
-
-        <h3 className="text-xl font-bold">Our Mission</h3>
-        <p className="text-neutral-600 leading-relaxed">
-          To cultivate a dynamic, enduring business model fostering innovation,
-          propelling growth, and delivering lasting value to stakeholders. We
-          leverage local expertise and global partnerships while upholding
-          high standards of health, safety, and environmental responsibility.
-        </p>
-
-        <h3 className="text-xl font-bold">Our Values</h3>
-        <ul className="list-disc list-inside text-neutral-600">
-          <li>Customer Orientation</li>
-          <li>Leadership</li>
-          <li>Integrity</li>
-          <li>Innovation</li>
-          <li>Teamwork</li>
-        </ul>
-
-        <h3 className="text-xl font-bold">Why Work With Us?</h3>
-        <p className="text-neutral-600 leading-relaxed">
-          We offer growth and advancement in a culture that prizes customer
-          satisfaction, transparency, and innovation—driving performance
-          improvements and high-quality outcomes for clients.
-        </p>
       </div>
     </section>
   </main>
