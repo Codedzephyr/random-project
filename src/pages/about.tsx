@@ -9,15 +9,16 @@ const AboutPage: React.FC = () => (
       <div className="mx-auto max-w-5xl px-4">
         <SectionTitle eyebrow="ABOUT US" title="Who We Are" />
         <p className="text-neutral-600 leading-relaxed">
-          Hyprops Nigeria Limited, a fully Nigerian-owned company, has
-          been a trusted provider of oilfield support services in the Nigerian
-          oil & gas industry since 1997. Our long-term strategy of vertical
-          integration positions us to support clients across the lifecycle of
-          assets—from design and engineering to operations & maintenance and
-          facility decommissioning. Our team is empowered to deliver exceptional
-          client satisfaction with a focus on synergy, integrity, innovation, and
-          teamwork. Over 25 years, our growth has reflected our commitment to
-          operational excellence and delivering exceptional value.
+          LPS-Hyprops Oil & Gas Service  LDA is an angolan owned company formed 
+          as a joint venture between LPS Lda and Hyprops Nigeria Limted represeting
+          HYGROUP.The synergy between both companies leverages on the strength of LPS LDA (Angola)
+          – specialists in industrial services and engineering and Hyprops Nigeria Limited – leaders
+          in oilfield services and pipeline solutions and EPCM Services on turnkey basis.
+          This synergy allows the JV to provide the following services Engineering ,Procurement ,Fabrication,
+          Construction and InstallationSubsea Life of Fields ServicesFacilities Operations and Maintenance Services
+          Manpower Outsourcing ServicesSupply Chain Management ServicesOur main purpose is to provide best in class 
+          products and services while focused on a strong safety culture, protecting the environment while promoting 
+          local content in all our operations.
         </p>
 
         <h3 className="text-xl font-bold">Our Vision</h3>
