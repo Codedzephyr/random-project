@@ -21,10 +21,11 @@ const AboutPage: React.FC = () => (
           local content in all our operations.
         </p>
 
-        <h3 className="text-xl font-bold">Our Vision</h3>
+        <h3 className="text-xl font-bold">Introduction</h3>
         <p className="text-neutral-600 leading-relaxed">
-          To be the leading oil & gas services company providing innovative and
-          technologically driven products and services.
+          As a local company, we  are strategically located close to the operating centers 
+          of companies and regulators within the oil and gas sector. We have offices in
+          Luanda and Cabinda. Our fabrication bases are also in both locations.
         </p>
 
         <h3 className="text-xl font-bold">Our Mission</h3>
